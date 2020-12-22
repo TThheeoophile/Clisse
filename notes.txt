@@ -1,0 +1,7 @@
+paramétrique : pas beaucoup de paramètres ; converge rapidement ; pas besoin de beaucoup de données d'entraînement
+
+le ratio optimum de découpage du jeu de données en base d'entraînement/de test
+
+le nbr de paramètres dépend de l'algo. S'il y a 
+
+Quand on minimise le critère BIC (par exemple) et qu'on fait ça visuellement, il faut pouvoir observer une décroissance du critère sur le graphique, puis une croissance, alors que s'il ne fait que décroître, on ne peut pas savoir exactement jusq'où il aurait fallua aller.
