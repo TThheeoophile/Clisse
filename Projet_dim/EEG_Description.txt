@@ -1,0 +1,72 @@
+Description
+Data Set 1a
+Description of Experiments:
+
+The datasets were taken from a healthy subject.
+The subject was asked to move a cursor up and down on a computer screen, while his cortical potentials were taken. During the recording, the subject received visual feedback of his slow cortical potentials (Cz-Mastoids). Cortical positivity lead to a downward movement of the cursor on the screen. Cortical negativity lead to an upward movement of the cursor. Each trial lasted 6s.
+During every trial, the task was visually presented by a highlighted goal at either the top or bottom of the screen to indicate negativity or positivity from second 0.5 until the end of the trial. The visual feedback was presented from second 2 to second 5.5. Only this 3.5 second interval of every trial is provided for training and testing. The sampling rate of 256 Hz and the recording length of 3.5s results in 896 samples per channel for every trial.
+Trial structure overview:
+Duration: 6 s, no inter trial intervals
+Task presentation: from 0.5 s to 6.0 s
+Feedback period: from 2.0 s to 5.5 s
+Data:
+
+Amplifier: PsyLab EEG8
+A/D-converter: Computer Boards PCIM-DAS1602/16 bit
+Amplitude range: +/-1000 µV
+Sampling rate: 256 S/s
+EEG data was taken from the following positions:
+Channel 1: A1-Cz (10/20 system) (A1 = left mastoid)
+Channel 2: A2-Cz
+Channel 3: 2 cm frontal of C3
+Channel 4: 2 cm parietal of C3
+Channel 5: 2 cm frontal of C4
+Channel 6: 2 cm parietal of C4
+All values are in µVolt.
+Traindata_1a:
+
+268 trials were recorded on two different days and mixed randomly. 135 trials belonging to class 0 and 133 trials belonging to class 1. The dimension is 268x5377.
+Every line of a matrix contains the data of one trial. The first column codes the class of the trial (0/1). The remaining columns contain the time samples of the 6 EEG channels. This starts with 896 samples from channel 1 and ends with 896 samples from channel 6.
+Testdata_1a:
+
+The dimension is 293x5376 and contains 293 trials of test data. Every trial was recorded on the second day and belongs to either class 0 or class 1. The matrix has nearly the same structure as the train data matrices except for the missing first column. Thus, every line contains 6 times 896 samples.
+Data Set 1b
+Description of Experiments:
+
+The datasets were taken from an artificially respirated ALS patient. The subject was asked to move a cursor up and down on a computer screen, while his cortical potentials were taken. During the recording, the subject received auditory and visual feedback of his slow cortical potentials (Cz-Mastoids). Cortical positivity lead to a downward movement of the cursor on the screen. Cortical negativity lead to an upward movement of the cursor. Each trial lasted 8s.
+During every trial, the task was visually and auditory presented by a highlighted goal at the top (for negativity) or bottom (for positivity) of the screen from second 0.5 until second 7.5 of every trial. In addition, the task ("up" or "down") was vocalized at second 0.5.
+The visual feedback was presented from second 2 to second 6.5. Only this 4.5 second interval of every trial is provided for training and testing. The sampling rate of 256 Hz and the recording length of 4.5s results in 1152 samples per channel for every trial.
+Trial structure overview:
+Duration: 8 s, no inter trial intervals
+task presentation: from 0.5 s to 7.5 s
+feedback period: from 2.0 s to 6.5 s
+Data:
+
+Amplifier: PsyLab EEG8
+A/D-converter: Computer Boards PCIM-DAS1602/16 bit
+Amplitude range: +/-1000 µV
+Sampling rate: 256 S/s
+EEG data was taken from the following positions:
+Channel 1: A1-Cz (10/20 system) (A1 = left mastoid)
+Channel 2: A2-Cz
+Channel 3: 2 cm frontal of C3
+Channel 4: 2 cm parietal of C3
+Channel 5: vEOG artifact channel to detect vertical eye movements
+Channel 6: 2 cm frontal of C4
+Channel 7: 2 cm parietal of C4
+All values are in µVolt.
+The EEG-values are not EOG-corrected.
+Traindata_1b:
+
+These files contain 200 trials which were recorded on the same day and permuted randomly.The matrix dimension is 200x8065.
+Every line of a matrix contains the data of one trial. The first column codes the class of the trial (0/1). The remaining columns contain the time samples of the 7 EEG/EOG channels. This starts with 1152 samples from channel 1 and ends with 1152 samples from channel 7.
+Testdata_1b:
+
+The dimension is 180x8064 and contains 180 trials of test data. This test data was recorded after the train data (during the same day) day. The 180 trials belong to either class 0 or class 1. The matrix has nearly the same structure as the train data matrices except for the missing first column. Thus, every line contains 7 times 1152 samples.
+Reference:
+
+Birbaumer, N., Flor, H., Ghanayim, N., Hinterberger, T., Iverson, I., Taub, E., Kotchoubey, B., Kübler, A., & Perelmouter, J, A Brain-Controlled Spelling Device for the Completely Paralyzed, Nature, 398, 297-298.
+Acknowledgements
+
+Datasets provided by University of Tuebingen.
+Correspondence to Thilo Hinterberger 
